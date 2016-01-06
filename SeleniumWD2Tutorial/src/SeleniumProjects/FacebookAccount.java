@@ -70,12 +70,12 @@ public class FacebookAccount {
 		Select sel2 = new Select(driver.findElement(By.id("month")));
 		Select sel3 = new Select(driver.findElement(By.id("year")));
 
-		/*
-		 * List<WebElement> options = sel1.getOptions(); int size =
-		 * options.size();
-		 * 
-		 * for(int i=0; i<size; i++) { String optionsName =
-		 * sel1.getOptions().get(i).getText(); System.out.println(optionsName);
+		/* CODE BELOW LISTS ALL OPTIONS FOR A DROP DOWN MENU AND PRINTS THEM OUT
+		 * List<WebElement> options = day.getOptions(); 
+		 * int size = options.size();
+		 * for(int i=0; i<size; i++) { 
+		 * String optionsName = day.getOptions().get(i).getText(); 
+		 * System.out.println(optionsName);
 		 * }
 		 */
 
@@ -87,6 +87,8 @@ public class FacebookAccount {
 
 		// By visible text
 		sel3.selectByVisibleText("2001");
+		
+		
 
 	
 		List<WebElement> radioButtons = driver.findElements(By.name("sex"));
@@ -94,6 +96,9 @@ public class FacebookAccount {
 		//if (!radioButtons.get(radioButtons.size() - 1).isSelected()) {
 			radioButtons.get(radioButtons.size() - 1).click();
 			Thread.sleep(2000);
+			
+			
+			driver.findElement(By.id("u_0_i")).click();
 		}
 	
 
